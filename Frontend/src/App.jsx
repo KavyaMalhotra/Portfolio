@@ -5,7 +5,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
 import ProjectGarage from "./pages/ProjectGarage";
-import Background from "./components/background"; // Import your BackgroundPage component
+import Background from "./components/background";
+import Backend from "./pages/Backend"; // ✅ Import your Backend page
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
           <Route path="/projects" element={<ProjectGarage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/background" element={<Background />} /> {/* Add the Background route */}
+          <Route path="/background" element={<Background />} />
+          <Route path="/backend" element={<Backend />} />
         </Routes>
       </div>
     </Router>
