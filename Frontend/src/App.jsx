@@ -6,7 +6,8 @@ import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
 import ProjectGarage from "./pages/ProjectGarage";
 import Background from "./components/background";
-import Backend from "./pages/Backend"; // ✅ Import your Backend page
+import Backend from "./pages/Backend";
+
 
 function App() {
   return (

@@ -210,7 +210,7 @@ export default function Backend() {
                 {showExpressMessage && (
                     <div className="mt-6 text-white text-lg leading-relaxed">
                         All these messages you are sending to or getting from the backend, like your password,
-                        your ratings, or the jokes from the API, are done by me{' '}
+                        your ratings, or the jokes from the API, are done by me (Express){' '}
                         <span className="text-green-400">:)</span> You can count on me to send any message to
                         the backend.
                     </div>
