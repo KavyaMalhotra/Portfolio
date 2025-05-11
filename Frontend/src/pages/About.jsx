@@ -63,7 +63,7 @@ const About = () => {
                             <h3 className="text-xl font-bold">Chandigarh University, Mohali</h3>
                             <p className="text-gray-400">B.E. in Computer Science & Engineering | July 2021 – June 2025</p>
                             <p className="text-gray-400">GPA: 7.62/10.0</p>
-                            <p className="text-gray-400">Courses: Algorithms, OS, Architecture, Computation Theory</p>
+                            <p className="text-gray-400">Courses: Algorithms, OS, Computer Architecture, Computation Theory</p>
                         </div>
                         <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
                             <h3 className="text-xl font-bold">Army Public School, Udhampur</h3>
