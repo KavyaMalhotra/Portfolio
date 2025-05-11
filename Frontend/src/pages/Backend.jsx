@@ -49,6 +49,10 @@ export default function Backend() {
 
     const handleApiClick = async () => {
         clearAllOutputs();
+
+        // 🛠 Hide any visible forms if they exist
+        setShowAuthForm(false);
+        setShowDatabaseForm(false);
         try {
             const res = await fetch(`${backendUrl}/api/joke`);
             const data = await res.json();

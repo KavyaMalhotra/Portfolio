@@ -1,41 +1,38 @@
 import React, { useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';  // Import useNavigate instead of useHistory
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/NavBar';
 import Footer from '../components/footer';
 
 const Home = () => {
-  const navigate = useNavigate();  // useNavigate hook to navigate programmatically
+  const navigate = useNavigate();
 
-
-  // Handle spacebar press
+  // Spacebar navigation for desktop
   useEffect(() => {
     const handleKeyPress = (event) => {
-      if (event.key === ' ') { // Space key
-        navigate('/background');  // Redirect to the background route
+      if (event.key === ' ') {
+        navigate('/background');
       }
     };
 
     window.addEventListener('keydown', handleKeyPress);
-
-    // Clean up the event listener
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
+    return () => window.removeEventListener('keydown', handleKeyPress);
   }, [navigate]);
 
-  
+  // Mobile tap handler
+  const handleSurpriseClick = () => {
+    if (window.innerWidth <= 768) {
+      navigate('/background');
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-indigo-900 to-black text-white">
       <Navbar />
 
-     {/* Stars background layer */}
-            <div className="absolute inset-0 bg-[url('../textures/stars.jpg')] bg-cover bg-center opacity-20 pointer-events-none z-0" />
+      {/* Stars background */}
+      <div className="absolute inset-0 bg-[url('../textures/stars.jpg')] bg-cover bg-center opacity-20 pointer-events-none z-0" />
 
-            <div className="relative z-10 max-w-5xl mx-auto space-y-20"></div>
-
-
-      <main className="flex-1 flex flex-col items-center justify-center text-center px-6">
+      <main className="flex-1 flex flex-col items-center justify-center text-center px-6 relative z-10">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 glow-text">
           Welcome to My Universe
         </h1>
@@ -48,11 +45,15 @@ const Home = () => {
         >
           About Me
         </Link>
-        {/* Add the surprise text */}
-        <p className="absolute bottom-6 right-6 text-lg font-semibold text-indigo-300">
-          Press <span className="font-bold">Space</span> to get a surprise!
-        </p>
       </main>
+
+      {/* Surprise message visible only on desktop, and clickable for mobile */}
+      <div
+        onClick={handleSurpriseClick}
+        className="hidden md:block text-center mb-4 text-lg font-semibold text-indigo-300 cursor-pointer hover:text-indigo-100 transition"
+      >
+        Press <span className="font-bold">Space</span> to get a surprise!
+      </div>
 
       <Footer />
     </div>
