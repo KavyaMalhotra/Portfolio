@@ -1,11 +1,30 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ProjectGarage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-black via-slate-900 to-black text-white p-8 font-sans relative overflow-hidden">
             {/* Background Stars */}
             <div className="absolute inset-0 bg-[url('../textures/stars.jpg')] bg-cover bg-center opacity-20 pointer-events-none z-0" />
+
+<Link
+        to="/"
+        className="
+          fixed top-4 left-4
+          bg-white/10 text-white
+          backdrop-blur-md rounded-md
+          border border-cyan-400
+          hover:bg-white/20 hover:text-black
+          cursor-pointer
+          px-3 py-1
+          z-50
+        "
+      >
+        ← Home
+      </Link>
+
+
 
             {/* Container */}
             <div className="relative z-10 max-w-6xl mx-auto space-y-20">
@@ -135,7 +154,7 @@ const ProjectGarage = () => {
                         <p className="text-sm text-gray-400 mb-4">
                             Built to support a friend conducting research on child psychology and family environments. The study involved
                             analyzing responses from over 300 children to 69 questions across multiple categories (both positive and
-                            negative). Manually calculating category-wise scores and personality conclusions was very time-consuming — 
+                            negative). Manually calculating category-wise scores and personality conclusions was very time-consuming —
                             so I built a tool to automate the process.
                         </p>
                         <ul className="list-disc list-inside text-gray-300 space-y-1">
@@ -171,43 +190,43 @@ const ProjectCard = ({ title, role, link, details, tools, demo }) => {
     const navigate = useNavigate();
 
     const handleDemoClick = () => {
-        navigate('/demo');
+        window.open('https://demo-home-automation-site-production.up.railway.app/', '_blank');
     };
 
-    return (
-        <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg space-y-2">
-            <h3 className="text-2xl font-bold text-cyan-300">{title}</h3>
-            <p className="italic text-gray-400">{role}</p>
-            <ul className="list-disc list-inside text-gray-300">
-                {details.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                ))}
-            </ul>
-            <p className="text-sm text-green-300 mt-2">Tools: {tools}</p>
-            {(link || demo) && (
-                <div className="mt-4 space-x-4">
-                    {link && (
-                        <a
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 underline hover:text-blue-200"
-                        >
-                            View Code
-                        </a>
-                    )}
-                    {demo && (
-                        <button
-                            onClick={handleDemoClick}
-                            className="px-4 py-2 bg-pink-500 rounded hover:bg-pink-600 transition"
-                        >
-                            Demo
-                        </button>
-                    )}
-                </div>
-            )}
-        </div>
-    );
+return (
+    <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg space-y-2">
+        <h3 className="text-2xl font-bold text-cyan-300">{title}</h3>
+        <p className="italic text-gray-400">{role}</p>
+        <ul className="list-disc list-inside text-gray-300">
+            {details.map((item, idx) => (
+                <li key={idx}>{item}</li>
+            ))}
+        </ul>
+        <p className="text-sm text-green-300 mt-2">Tools: {tools}</p>
+        {(link || demo) && (
+            <div className="mt-4 space-x-4">
+                {link && (
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 underline hover:text-blue-200"
+                    >
+                        View Code
+                    </a>
+                )}
+                {demo && (
+                    <button
+                        onClick={handleDemoClick}
+                        className="px-4 py-2 bg-pink-500 rounded hover:bg-pink-600 transition"
+                    >
+                        Demo
+                    </button>
+                )}
+            </div>
+        )}
+    </div>
+);
 };
 
 export default ProjectGarage;

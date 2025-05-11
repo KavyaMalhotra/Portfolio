@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../components/NavBar';
 
 const About = () => {
     return (
@@ -10,6 +9,25 @@ const About = () => {
             <div className="absolute inset-0 bg-[url('../textures/stars.jpg')] bg-cover bg-center opacity-20 pointer-events-none z-0" />
 
             <div className="relative z-10 max-w-5xl mx-auto space-y-20">
+
+
+
+                <Link
+                    to="/"
+                    className="
+          fixed top-4 left-4
+          bg-white/10 text-white
+          backdrop-blur-md rounded-md
+          border border-cyan-400
+          hover:bg-white/20 hover:text-black
+          cursor-pointer
+          px-3 py-1
+          z-50
+        "
+                >
+                    ← Home
+                </Link>
+
 
                 {/* Introduction */}
                 <section className="text-center">
@@ -21,18 +39,18 @@ const About = () => {
                         {/* Skills Button */}
                         {/* Rocket Button */}
                         <Link to="/skills">
-                        <button className="w-48 h-16 rounded-full bg-gradient-to-br from-red-700 to-red-900 text-white text-lg flex items-center justify-center border-2 border-cyan-400 shadow-[0_0_10px_rgba(0,255,255,0.5)] hover:from-red-600 hover:to-red-800 hover:shadow-[0_0_20px_rgba(0,255,255,0.8)] hover:scale-105 transform transition-all duration-300 cursor-pointer relative overflow-hidden group px-4">
-                            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></span>
-                            My Skills
-                        </button>
+                            <button className="w-48 h-16 rounded-full bg-gradient-to-br from-red-700 to-red-900 text-white text-lg flex items-center justify-center border-2 border-cyan-400 shadow-[0_0_10px_rgba(0,255,255,0.5)] hover:from-red-600 hover:to-red-800 hover:shadow-[0_0_20px_rgba(0,255,255,0.8)] hover:scale-105 transform transition-all duration-300 cursor-pointer relative overflow-hidden group px-4">
+                                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></span>
+                                My Skills
+                            </button>
                         </Link>
 
                         {/* UFO Button */}
                         <Link to="/projects">
-                        <button className="w-48 h-16 rounded-full bg-gradient-to-br from-blue-700 to-blue-900 text-white text-lg flex items-center justify-center border-2 border-cyan-400 shadow-[0_0_10px_rgba(0,255,255,0.5)] hover:from-blue-600 hover:to-blue-800 hover:shadow-[0_0_20px_rgba(0,255,255,0.8)] hover:scale-105 transform transition-all duration-300 cursor-pointer relative overflow-hidden group px-4">
-                            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></span>
-                            My Project Garage
-                        </button>
+                            <button className="w-48 h-16 rounded-full bg-gradient-to-br from-blue-700 to-blue-900 text-white text-lg flex items-center justify-center border-2 border-cyan-400 shadow-[0_0_10px_rgba(0,255,255,0.5)] hover:from-blue-600 hover:to-blue-800 hover:shadow-[0_0_20px_rgba(0,255,255,0.8)] hover:scale-105 transform transition-all duration-300 cursor-pointer relative overflow-hidden group px-4">
+                                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></span>
+                                My Project Garage
+                            </button>
                         </Link>
                     </div>
                 </section>

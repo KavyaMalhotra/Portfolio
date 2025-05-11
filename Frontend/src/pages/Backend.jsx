@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Backend() {
-    const navigate = useNavigate(); // ✅ useNavigate hook
+    const navigate = useNavigate();
 
+    // State hooks
     const [showAuthForm, setShowAuthForm] = useState(false);
     const [showDatabaseForm, setShowDatabaseForm] = useState(false);
     const [showExpressMessage, setShowExpressMessage] = useState(false);
@@ -12,37 +13,42 @@ export default function Backend() {
     const [hashedPassword, setHashedPassword] = useState('');
     const [dbName, setDbName] = useState('');
     const [dbRating, setDbRating] = useState('');
-    const [dbResponse, setDbResponse] = useState('');
+    const [dbResponse, setDbResponse] = useState(null);
     const [showDbResponse, setShowDbResponse] = useState(false);
     const [joke, setJoke] = useState('');
 
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
-    const handleAuthClick = () => {
-        setShowAuthForm(true);
-        setShowDatabaseForm(false);
+    // Helper to clear all result state before showing a new section
+    const clearAllOutputs = () => {
+        setHashedPassword('');
+        setDbResponse(null);
+        setShowDbResponse(false);
         setShowExpressMessage(false);
         setJoke('');
+    };
+
+    const handleAuthClick = () => {
+        clearAllOutputs();
+        setShowAuthForm(true);
+        setShowDatabaseForm(false);
     };
 
     const handleDatabaseClick = () => {
+        clearAllOutputs();
         setShowAuthForm(false);
         setShowDatabaseForm(true);
-        setShowExpressMessage(false);
-        setJoke('');
     };
 
     const handleExpressClick = () => {
+        clearAllOutputs();
         setShowAuthForm(false);
         setShowDatabaseForm(false);
         setShowExpressMessage(true);
-        setJoke('');
     };
 
     const handleApiClick = async () => {
-        setShowAuthForm(false);
-        setShowDatabaseForm(false);
-        setShowExpressMessage(false);
+        clearAllOutputs();
         try {
             const res = await fetch(`${backendUrl}/api/joke`);
             const data = await res.json();
@@ -69,19 +75,17 @@ export default function Backend() {
 
     const submitDatabase = async (e) => {
         e.preventDefault();
-
         try {
             const res = await axios.post(`${backendUrl}/save-rating`, {
                 name: dbName,
                 rating: dbRating,
             });
-
             setShowDatabaseForm(false);
             setDbResponse({
                 message: res.data.message,
                 totalRatings: res.data.totalRatings,
             });
-            setShowDbResponse(true); // ✅ show message only after submit
+            setShowDbResponse(true);
         } catch (error) {
             console.error('Error submitting rating:', error);
             setDbResponse({ message: 'There was an error saving your rating. Please try again.' });
@@ -92,6 +96,7 @@ export default function Backend() {
     return (
         <div className="min-h-screen bg-black text-green-400 font-mono flex justify-center items-center">
             <div className="w-full max-w-4xl p-6">
+
                 {/* Heading */}
                 <h1 className="text-2xl mb-4">
                     <span className="text-green-400">[</span>
@@ -135,6 +140,7 @@ export default function Backend() {
                     </button>
                 </div>
 
+                {/* Authentication Form */}
                 {showAuthForm && !hashedPassword && (
                     <div className="mt-6 text-white">
                         <h2 className="text-xl mb-4">Enter Password:</h2>
@@ -158,7 +164,9 @@ export default function Backend() {
 
                 {hashedPassword && (
                     <div className="mt-6 text-white text-center">
-                        <p className="text-xl mb-2">This is how your password will look inside a database  <span className="text-green-400">;)</span> </p>
+                        <p className="text-xl mb-2">
+                            This is how your password will look inside a database <span className="text-green-400">;)</span>
+                        </p>
                         <p className="text-green-400 font-mono break-words">{hashedPassword}</p>
                     </div>
                 )}
@@ -167,10 +175,7 @@ export default function Backend() {
                 {showDatabaseForm && (
                     <div className="mt-6 text-white">
                         <h2 className="text-xl mb-4">Enter Your Details:</h2>
-                        <form
-                            className="flex flex-col space-y-4"
-                            onSubmit={submitDatabase}
-                        >
+                        <form className="flex flex-col space-y-4" onSubmit={submitDatabase}>
                             <input
                                 type="text"
                                 placeholder="Enter your name"
@@ -194,10 +199,9 @@ export default function Backend() {
                                 Submit
                             </button>
                         </form>
-
                     </div>
-
                 )}
+
                 {showDbResponse && dbResponse && (
                     <div className="mt-6 text-white">
                         <p className="mt-4">{dbResponse.message}</p>
@@ -205,13 +209,12 @@ export default function Backend() {
                     </div>
                 )}
 
-
                 {/* Express Routing Message */}
                 {showExpressMessage && (
                     <div className="mt-6 text-white text-lg leading-relaxed">
                         All these messages you are sending to or getting from the backend, like your password,
-                        your ratings, or the jokes from the API, are done by me (Express){' '}
-                        <span className="text-green-400">:)</span> You can count on me to send any message to
+                        your ratings, or the jokes from the API, are done by me (Express)
+                        <span className="text-green-400"> :)</span> You can count on me to send any message to
                         the backend.
                     </div>
                 )}
@@ -221,13 +224,15 @@ export default function Backend() {
                     <>
                         <p className="mt-6 text-yellow-400 text-lg">{joke}</p>
                         <p className="mt-4 text-white">
-                            Guess what? Your trusty backend, powered by REST architecture, just did all the heavy lifting to fetch this joke from an external API and bring it straight to you! :') With REST, I handle all the hard work while you get smooth, seamless results. You can always count on me to keep things running like clockwork! ;)
+                            Guess what? Your trusty backend, powered by REST architecture, just did all the heavy
+                            lifting to fetch this joke from an external API and bring it straight to you! :') With
+                            REST, I handle all the hard work while you get smooth, seamless results. You can always
+                            count on me to keep things running like clockwork! ;)
                         </p>
                     </>
                 )}
 
-
-                {/* ✅ Back to Home Button */}
+                {/* Back to Home Button */}
                 <div className="mt-12 flex justify-center">
                     <button
                         onClick={() => navigate('/')}
