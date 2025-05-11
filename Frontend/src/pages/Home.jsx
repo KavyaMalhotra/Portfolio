@@ -34,7 +34,7 @@ const Home = () => {
 
       <main className="flex-1 flex flex-col items-center justify-center text-center px-6 relative z-10">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 glow-text">
-          Welcome to My Universe
+          Welcome to My Portfolio
         </h1>
         <p className="text-lg md:text-2xl max-w-2xl mb-8 font-light text-indigo-200">
           What you know today might be wrong tomorrow — that’s why you should never stop learning.

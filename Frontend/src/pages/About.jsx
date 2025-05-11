@@ -92,8 +92,9 @@ const About = () => {
                 <section className="mb-16 text-center">
                     <h2 className="text-3xl font-semibold mb-4">🧬 Personal Log</h2>
                     <p className="text-gray-300 max-w-3xl mx-auto">
-                        When I'm not coding, I’m usually diving into personal projects, learning new things, or getting lost in the worlds of video games and anime. Criminal series are my go-to for a good thrill, and nothing beats hanging out with friends. I love exploring both the digital and real worlds, always eager to learn and experience more.
+                        When I'm not coding, I’m usually diving into personal projects, learning new things, or getting lost in the worlds of video games and anime. Criminal series are my go-to for a good thrill, and nothing beats hanging out with friends. I love exploring both the digital and real worlds, always eager to learn and experience more. Music fuels my focus and moods — from the raw energy of Linkin Park to the nostalgic charm of old Bollywood classics.
                     </p>
+
                 </section>
 
                 {/* Personal Philosophy */}

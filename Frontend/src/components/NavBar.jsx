@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-gray-900 via-indigo-900 to-black text-white shadow-md p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold tracking-wider glow-text">
-          🚀 SpaceDev
+          🚀 My Portfolio
         </Link>
 
         {/* Desktop Menu */}
