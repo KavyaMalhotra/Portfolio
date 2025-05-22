@@ -7,6 +7,8 @@ import Skills from "./pages/Skills";
 import ProjectGarage from "./pages/ProjectGarage";
 import Background from "./components/background";
 import Backend from "./pages/Backend";
+import { Analytics } from '@vercel/analytics/react';
+
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
           <Route path="/background" element={<Background />} />
           <Route path="/backend" element={<Backend />} />
         </Routes>
+        <Analytics />
       </div>
     </Router>
   );
