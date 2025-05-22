@@ -12,21 +12,23 @@ const About = () => {
 
 
 
-                <Link
-                    to="/"
-                    className="
-          fixed top-4 left-4
-          bg-white/10 text-white
-          backdrop-blur-md rounded-md
-          border border-cyan-400
-          hover:bg-white/20 hover:text-black
-          cursor-pointer
-          px-3 py-1
-          z-50
-        "
-                >
-                    ← Home
-                </Link>
+                            <div className = "pt-2">
+                            <Link
+                                to="/"
+                                className="
+                    fixed top-4 left-4
+                    bg-white/10 text-white
+                    backdrop-blur-md rounded-md
+                    border border-cyan-400
+                    hover:bg-white/20 hover:text-black
+                    cursor-pointer
+                    px-3 py-1
+                    z-50
+                  "
+                            >
+                                ← Home
+                            </Link>
+                            </div>
 
 
                 {/* Introduction */}

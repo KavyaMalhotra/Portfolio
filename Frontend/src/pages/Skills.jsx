@@ -43,21 +43,23 @@ const Skills = () => {
                 className="absolute inset-0 bg-[url('/textures/stars.jpg')] bg-cover bg-center opacity-20 pointer-events-none"
             />
 
-<Link
-        to="/"
-        className="
-          fixed top-4 left-4
-          bg-white/10 text-white
-          backdrop-blur-md rounded-md
-          border border-cyan-400
-          hover:bg-white/20 hover:text-black
-          cursor-pointer
-          px-3 py-1
-          z-50
-        "
-      >
-        ← Home
-      </Link>
+            <div className = "pt-14">
+            <Link
+                to="/"
+                className="
+    fixed top-4 left-4
+    bg-white/10 text-white
+    backdrop-blur-md rounded-md
+    border border-cyan-400
+    hover:bg-white/20 hover:text-black
+    cursor-pointer
+    px-3 py-1
+    z-50
+  "
+            >
+                ← Home
+            </Link>
+            </div>
 
 
             <div className="relative z-10 max-w-6xl mx-auto space-y-12">

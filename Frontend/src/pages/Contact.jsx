@@ -8,25 +8,29 @@ const Contact = () => {
             {/* Stars in the background */}
             <div className="absolute inset-0 bg-[url('../textures/stars.jpg')] bg-cover bg-center opacity-20 z-0" />
 
+{/* ← Back to Home Button */}
+                            <div className = "pt-14">
+                            <Link
+                                to="/"
+                                className="
+                    fixed top-4 left-4
+                    bg-white/10 text-white
+                    backdrop-blur-md rounded-md
+                    border border-cyan-400
+                    hover:bg-white/20 hover:text-black
+                    cursor-pointer
+                    px-3 py-1
+                    z-50
+                  "
+                            >
+                                ← Home
+                            </Link>
+                            </div>
+
             <div className="relative z-10 max-w-3xl mx-auto space-y-12">
                 <h1 className="text-5xl font-bold text-center text-cyan-400">📬 Contact Me</h1>
 
-                {/* ← Back to Home Button */}
-                <Link
-                    to="/"
-                    className="
-          fixed top-4 left-4
-          bg-white/10 text-white
-          backdrop-blur-md rounded-md
-          border border-cyan-400
-          hover:bg-white/20 hover:text-black
-          cursor-pointer
-          px-3 py-1
-          z-50
-        "
-                >
-                    ← Home
-                </Link>
+                
 
                 {/* Direct Links */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
