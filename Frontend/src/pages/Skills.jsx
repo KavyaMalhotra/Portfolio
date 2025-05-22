@@ -43,10 +43,10 @@ const Skills = () => {
                 className="absolute inset-0 bg-[url('/textures/stars.jpg')] bg-cover bg-center opacity-20 pointer-events-none"
             />
 
-            <div className = "pt-14">
-            <Link
-                to="/"
-                className="
+            <div className="pt-14">
+                <Link
+                    to="/"
+                    className="
     fixed top-4 left-4
     bg-white/10 text-white
     backdrop-blur-md rounded-md
@@ -56,9 +56,9 @@ const Skills = () => {
     px-3 py-1
     z-50
   "
-            >
-                ← Home
-            </Link>
+                >
+                    ← Home
+                </Link>
             </div>
 
 
@@ -82,8 +82,10 @@ const Skills = () => {
                                 >
                                     <p className="text-lg font-semibold text-center">{skill.name}</p>
                                     {activeSkill?.name === skill.name && (
-                                        <div className="absolute z-20 top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-gray-800 p-3 rounded-md border border-cyan-400 shadow-xl text-sm text-cyan-200">
+                                        <div className="relative w-full flex justify-center">
+                                        <div className="absolute z-20 top-full left-1/2 transform -translate-x-1/2 mt-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-gray-800 p-3 rounded-md border border-cyan-400 shadow-xl text-sm text-cyan-200 break-words overflow-hidden">
                                             {skill.description}
+                                        </div>
                                         </div>
                                     )}
                                 </div>
@@ -110,7 +112,7 @@ const Skills = () => {
                         />
                     </button>
                 </div>
-                
+
             </div>
         </div>
     );
