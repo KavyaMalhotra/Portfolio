@@ -35,8 +35,7 @@ const About = () => {
                     <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
                         I’m a Computer Science Graduate with a deep passion for building impactful tech solutions, researching emerging systems, and exploring how code can shape the world — or even help us reach beyond it.
                     </p>
-                    <div className="mt-6 flex justify-center space-x-6">
-                        {/* Skills Button */}
+                    <div className="mt-6 flex flex-col md:flex-row justify-center md:space-x-6 space-y-4 md:space-y-0">
                         {/* Rocket Button */}
                         <Link to="/skills">
                             <button className="w-48 h-16 rounded-full bg-gradient-to-br from-red-700 to-red-900 text-white text-lg flex items-center justify-center border-2 border-cyan-400 shadow-[0_0_10px_rgba(0,255,255,0.5)] hover:from-red-600 hover:to-red-800 hover:shadow-[0_0_20px_rgba(0,255,255,0.8)] hover:scale-105 transform transition-all duration-300 cursor-pointer relative overflow-hidden group px-4">
