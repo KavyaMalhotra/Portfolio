@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useEffect } from 'react';
+
+useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
 
 export default function Backend() {
     const navigate = useNavigate();
