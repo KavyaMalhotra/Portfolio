@@ -10,9 +10,9 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-gray-900 via-indigo-900 to-black text-white shadow-md p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold tracking-wider glow-text">
+        <span className="text-2xl font-bold tracking-wider glow-text">
           🚀 My Portfolio
-        </Link>
+        </span>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 text-lg">

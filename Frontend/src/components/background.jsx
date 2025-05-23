@@ -93,6 +93,38 @@ export default function Background() {
       }}>
         Press Esc to go back
       </div>
+      {/* Purpose Text */}
+      <div style={{
+        position: 'absolute',
+        bottom: '60px',
+        left: '10px',
+        maxWidth: '400px',
+        color: 'white',
+        background: 'rgba(0,0,0,0.5)',
+        padding: '4px 8px',
+        borderRadius: '4px',
+        fontSize: '1.25rem',
+        fontWeight: 'bold',
+        animation: 'fadeInUp 2s ease-out',
+      }}>
+        I created this space scene to creatively showcase my frontend skills.
+      </div>
+
+      <style>
+        {`
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+`}
+      </style>
+
     </>
   );
 }

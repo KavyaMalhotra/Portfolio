@@ -32,11 +32,11 @@ const ProjectGarage = () => {
             {/* Container */}
             <div className="relative z-10 max-w-6xl mx-auto space-y-20">
 
-                <h1 className="text-5xl font-bold text-center text-cyan-400 mb-10">🚀 Project Garage</h1>
+                <h1 className="text-5xl font-bold text-center text-cyan-400 mb-10">Project Garage</h1>
 
                 {/* MAJOR PROJECTS SECTION */}
                 <section>
-                    <h2 className="text-3xl text-green-300 mb-6 text-center">🛠️ Major Projects</h2>
+                    <h2 className="text-3xl text-green-300 mb-6 text-center">Major Projects</h2>
                     <div className="space-y-8">
                         <ProjectCard
                             title="RANTIT"
@@ -86,10 +86,10 @@ const ProjectGarage = () => {
 
                 {/* HOSTED SITES SECTION */}
                 <section>
-                    <h2 className="text-3xl text-yellow-300 mt-16 mb-6 text-left">📡 Hosted Sites</h2>
+                    <h2 className="text-3xl text-yellow-300 mt-16 mb-6 text-left">Hosted Sites</h2>
                     <div className="bg-white/10 p-6 rounded-xl backdrop-blur-md text-gray-200 space-y-6">
                         <div>
-                            <h3 className="text-2xl text-cyan-300 mb-4">🛰️ Static Sites</h3>
+                            <h3 className="text-2xl text-cyan-300 mb-4">Static Sites</h3>
                             <ul className="space-y-4">
                                 <li>
                                     <a href="https://simongamekavya.netlify.app" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline hover:text-blue-200 text-lg font-medium">
@@ -119,7 +119,7 @@ const ProjectGarage = () => {
                         </div>
 
                         <div>
-                            <h3 className="text-2xl text-cyan-300 mt-8 mb-4">🚀 Dynamic Sites</h3>
+                            <h3 className="text-2xl text-cyan-300 mt-8 mb-4">Dynamic Sites</h3>
                             <ul className="space-y-4">
                                 <li>
                                     <a href="https://joke-website-p1l5.onrender.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline hover:text-blue-200 text-lg font-medium">
@@ -149,7 +149,7 @@ const ProjectGarage = () => {
 
                 {/* IMPACT PROJECT SECTION */}
                 <section>
-                    <h2 className="text-3xl text-purple-300 mt-16 mb-6 text-left">🧠 A Personal Impact</h2>
+                    <h2 className="text-3xl text-purple-300 mt-16 mb-6 text-left">A Personal Impact</h2>
                     <div className="bg-white/10 p-6 rounded-xl backdrop-blur-md text-gray-200">
                         <h3 className="text-2xl text-cyan-300 mb-2">
                             Psychology Research Support Tool

@@ -33,7 +33,7 @@ const About = () => {
 
                 {/* Introduction */}
                 <section className="text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">👩‍🚀 Hello, I’m Kavya Malhotra</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Hello, I’m Kavya Malhotra</h1>
                     <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
                         I’m a Computer Science Graduate with a deep passion for building impactful tech solutions, researching emerging systems, and exploring how code can shape the world — or even help us reach beyond it.
                     </p>
@@ -58,7 +58,7 @@ const About = () => {
 
                 {/* Education */}
                 <section>
-                    <h2 className="text-3xl font-semibold mb-6 text-center">🎓 Education</h2>
+                    <h2 className="text-3xl font-semibold mb-6 text-center">Education</h2>
                     <div className="space-y-6">
                         <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
                             <h3 className="text-xl font-bold">Chandigarh University, Mohali</h3>
@@ -76,7 +76,7 @@ const About = () => {
 
                 {/* Publications */}
                 <section>
-                    <h2 className="text-3xl font-semibold mb-6 text-center">📚 Publications</h2>
+                    <h2 className="text-3xl font-semibold mb-6 text-center">Publications</h2>
                     <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg space-y-4 text-gray-300">
                         <div>
                             <strong><a href="https://pubs.aip.org/aip/acp/article-abstract/2978/1/060009/3037443/Comprehensive-study-of-smart-home-automation?redirectedFrom=fulltext" target="_blank" rel="noopener noreferrer">Comprehensive Study of Smart Home Automation Techniques</a></strong><br />
@@ -91,7 +91,7 @@ const About = () => {
 
 
                 <section className="mb-16 text-center">
-                    <h2 className="text-3xl font-semibold mb-4">🧬 Personal Log</h2>
+                    <h2 className="text-3xl font-semibold mb-4">Personal Log</h2>
                     <p className="text-gray-300 max-w-3xl mx-auto">
                         When I'm not coding, I’m usually diving into personal projects, learning new things, or getting lost in the worlds of video games and anime. Criminal series are my go-to for a good thrill, and nothing beats hanging out with friends. I love exploring both the digital and real worlds, always eager to learn and experience more. Music fuels my focus and moods — from the raw energy of Linkin Park to the nostalgic charm of old Bollywood classics.
                     </p>
@@ -100,7 +100,7 @@ const About = () => {
 
                 {/* Personal Philosophy */}
                 <section className="mb-16 text-center">
-                    <h2 className="text-3xl font-semibold mb-6">🌌 Personal Philosophy</h2>
+                    <h2 className="text-3xl font-semibold mb-6">Personal Philosophy</h2>
                     <blockquote className="text-xl italic text-gray-300 max-w-3xl mx-auto">
                         "Somewhere, something incredible is waiting to be known."
                         <span className="block mt-2 text-gray-500 text-sm">— Carl Sagan</span>

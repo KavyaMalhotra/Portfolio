@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const skillCategories = {
-    '👨‍💻 Programming Languages': [
+    'Programming Languages': [
         { name: 'C++', description: 'Efficient, high-performance programming for system-level and OOP tasks.' },
         { name: 'Python', description: 'Versatile language for automation, scripting, and AI applications.' }
     ],
-    '🧠 Problem Solving': [
+    'Problem Solving': [
         { name: 'DSA', description: 'Strong grasp of data structures and algorithms for optimized coding.' }
     ],
-    '🚀 Full Stack Web Development': [
+    'Full Stack Web Development': [
         { name: 'HTML', description: 'Standard markup for structuring web pages.' },
         { name: 'CSS', description: 'Styling the web with responsive and aesthetic designs.' },
         { name: 'JavaScript', description: 'Dynamic behavior and logic for interactive web apps.' },
@@ -24,7 +24,7 @@ const skillCategories = {
         { name: 'REST', description: 'Designing scalable APIs using RESTful principles.' },
         { name: 'Flask', description: 'Lightweight Python web framework I often use to build external APIs that power and extend the functionality of my projects.' }
     ],
-    '🧑‍🚀 Interpersonal Skills': [
+    'Interpersonal Skills': [
         { name: 'Teamwork', description: 'Collaborative mindset for efficient group problem solving.' },
         { name: 'Leadership', description: 'Guiding teams, taking ownership, and ensuring success.' },
         { name: 'Adaptive', description: 'Quick learner who adjusts fast in changing environments.' },
@@ -65,7 +65,7 @@ const Skills = () => {
             <div className="relative z-10 max-w-6xl mx-auto space-y-12">
                 {/* Header */}
                 <h1 className="text-4xl md:text-5xl font-bold text-center text-cyan-400">
-                    🛠️ Welcome to My Spaceship Workshop
+                    Explore My Developer Arsenal
                 </h1>
 
                 {/* Skill categories */}
@@ -83,9 +83,9 @@ const Skills = () => {
                                     <p className="text-lg font-semibold text-center">{skill.name}</p>
                                     {activeSkill?.name === skill.name && (
                                         <div className="relative w-full flex justify-center">
-                                        <div className="absolute z-20 top-full left-1/2 transform -translate-x-1/2 mt-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-gray-800 p-3 rounded-md border border-cyan-400 shadow-xl text-sm text-cyan-200 break-words overflow-hidden">
-                                            {skill.description}
-                                        </div>
+                                            <div className="absolute z-20 top-full left-1/2 transform -translate-x-1/2 mt-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-gray-800 p-3 rounded-md border border-cyan-400 shadow-xl text-sm text-cyan-200 break-words overflow-hidden">
+                                                {skill.description}
+                                            </div>
                                         </div>
                                     )}
                                 </div>

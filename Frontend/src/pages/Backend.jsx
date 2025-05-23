@@ -98,8 +98,21 @@ export default function Backend() {
     };
 
     return (
+
+
+
         <div className="min-h-screen bg-black text-green-400 font-mono flex justify-center items-center">
             <div className="w-full max-w-4xl p-6">
+
+                {/* Back to Home Button */}
+                <div className="mt-12 flex justify-center">
+                    <button
+                        onClick={() => navigate('/')}
+                        className="absolute top-4 left-4 px-4 py-2 border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition duration-300 z-50"
+                    >
+                        ← Back to Home
+                    </button>
+                </div>
 
                 {/* Heading */}
                 <h1 className="text-2xl mb-4">
@@ -117,33 +130,22 @@ export default function Backend() {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex justify-center space-x-6 mb-8 flex-wrap">
-                    <button
-                        className="w-48 p-6 text-left text-lg bg-transparent border border-green-400 hover:bg-green-400 hover:text-black transition duration-300"
-                        onClick={handleAuthClick}
-                    >
-                        Authentication
-                    </button>
-                    <button
-                        className="w-48 p-6 text-left text-lg bg-transparent border border-green-400 hover:bg-green-400 hover:text-black transition duration-300"
-                        onClick={handleDatabaseClick}
-                    >
-                        Database
-                    </button>
-                    <button
-                        className="w-48 p-6 text-left text-lg bg-transparent border border-green-400 hover:bg-green-400 hover:text-black transition duration-300"
-                        onClick={handleExpressClick}
-                    >
-                        Express Routing
-                    </button>
-                    <button
-                        className="w-48 p-6 text-left text-lg bg-transparent border border-green-400 hover:bg-green-400 hover:text-black transition duration-300"
-                        onClick={handleApiClick}
-                    >
-                        API
-                    </button>
+                <div className="flex justify-center flex-wrap gap-4 mb-8">
+                    {['Authentication', 'Database', 'Express Routing', 'API'].map((label, i) => (
+                        <button
+                            key={i}
+                            className="min-w-[12rem] p-6 text-left text-lg bg-transparent border border-green-400 hover:bg-green-400 hover:text-black transition duration-300"
+                            onClick={
+                                label === 'Authentication' ? handleAuthClick :
+                                    label === 'Database' ? handleDatabaseClick :
+                                        label === 'Express Routing' ? handleExpressClick :
+                                            handleApiClick
+                            }
+                        >
+                            {label}
+                        </button>
+                    ))}
                 </div>
-
                 {/* Authentication Form */}
                 {showAuthForm && !hashedPassword && (
                     <div className="mt-6 text-white">
@@ -236,15 +238,7 @@ export default function Backend() {
                     </>
                 )}
 
-                {/* Back to Home Button */}
-                <div className="mt-12 flex justify-center">
-                    <button
-                        onClick={() => navigate('/')}
-                        className="absolute top-4 left-4 px-4 py-2 border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition duration-300 z-50"
-                    >
-                        ← Back to Home
-                    </button>
-                </div>
+
             </div>
         </div>
     );

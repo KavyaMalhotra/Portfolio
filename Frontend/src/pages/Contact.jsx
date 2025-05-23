@@ -28,7 +28,7 @@ const Contact = () => {
                             </div>
 
             <div className="relative z-10 max-w-3xl mx-auto space-y-12">
-                <h1 className="text-5xl font-bold text-center text-cyan-400">📬 Contact Me</h1>
+                <h1 className="text-5xl font-bold text-center text-cyan-400">Contact Me</h1>
 
                 
 
