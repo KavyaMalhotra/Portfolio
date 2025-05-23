@@ -1,14 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import NavBar from '../components/NavBar';
 
 const ProjectGarage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-black via-slate-900 to-black text-white p-8 font-sans relative overflow-hidden">
+            <div className = "pt-14">
+            <NavBar />
+            </div>
             {/* Background Stars */}
             <div className="absolute inset-0 bg-[url('../textures/stars.jpg')] bg-cover bg-center opacity-20 pointer-events-none z-0" />
 
-            <div className = "pt-16">
+
+            {/* Back to Home Button */}
+            {/* <div className = "pt-16">
             <Link
                 to="/"
                 className="
@@ -24,7 +30,7 @@ const ProjectGarage = () => {
             >
                 ← Home
             </Link>
-            </div>
+            </div> */}
 
 
 

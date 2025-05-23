@@ -8,7 +8,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-gradient-to-r from-gray-900 via-indigo-900 to-black text-white shadow-md p-4">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-900 via-indigo-900 to-black text-white shadow-md p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <span className="text-2xl font-bold tracking-wider glow-text">
           🚀 My Portfolio

@@ -1,15 +1,19 @@
 import React from 'react';
 import twitterIcon from '../assets/twitter-x.svg';
 import { Link } from 'react-router-dom';
+import NavBar from '../components/NavBar';
 
 const Contact = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-black via-indigo-900 to-black text-white px-6 py-12 relative overflow-hidden">
+            <div className = "pt-14">
+            <NavBar />
+            </div>
             {/* Stars in the background */}
             <div className="absolute inset-0 bg-[url('../textures/stars.jpg')] bg-cover bg-center opacity-20 z-0" />
 
 {/* ← Back to Home Button */}
-                            <div className = "pt-14">
+                            {/* <div className = "pt-14">
                             <Link
                                 to="/"
                                 className="
@@ -25,7 +29,7 @@ const Contact = () => {
                             >
                                 ← Home
                             </Link>
-                            </div>
+                            </div> */}
 
             <div className="relative z-10 max-w-3xl mx-auto space-y-12">
                 <h1 className="text-5xl font-bold text-center text-cyan-400">Contact Me</h1>

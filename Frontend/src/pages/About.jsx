@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from '../components/NavBar';
 
 const About = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-black via-indigo-900 to-black text-white px-6 py-16 font-sans relative overflow-hidden">
-
+        <div className="min-h-screen bg-gradient-to-b from-black via-indigo-900 to-black text-white px-6 pt-24 pb-16 font-sans relative overflow-hidden">
+            <NavBar />
+            
             {/* Stars background layer */}
             <div className="absolute inset-0 bg-[url('../textures/stars.jpg')] bg-cover bg-center opacity-20 pointer-events-none z-0" />
+            
 
             <div className="relative z-10 max-w-5xl mx-auto space-y-20">
 
 
 
-                            <div className = "pt-2">
+                            {/* <div className = "pt-2">
                             <Link
                                 to="/"
                                 className="
@@ -28,7 +31,7 @@ const About = () => {
                             >
                                 ← Home
                             </Link>
-                            </div>
+                            </div> */}
 
 
                 {/* Introduction */}

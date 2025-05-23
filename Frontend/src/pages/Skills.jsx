@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import NavBar from '../components/NavBar';
 
 const skillCategories = {
     'Programming Languages': [
@@ -38,12 +39,15 @@ const Skills = () => {
 
     return (
         <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white px-6 py-12 overflow-hidden">
+            <div className = "pt-14">
+            <NavBar />
+            </div>
             {/* Starfield background */}
             <div
                 className="absolute inset-0 bg-[url('/textures/stars.jpg')] bg-cover bg-center opacity-20 pointer-events-none"
             />
 
-            <div className="pt-14">
+            {/* <div className="pt-14">
                 <Link
                     to="/"
                     className="
@@ -59,7 +63,7 @@ const Skills = () => {
                 >
                     ← Home
                 </Link>
-            </div>
+            </div> */}
 
 
             <div className="relative z-10 max-w-6xl mx-auto space-y-12">

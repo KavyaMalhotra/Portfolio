@@ -108,7 +108,7 @@ export default function Backend() {
                 <div className="mt-12 flex justify-center">
                     <button
                         onClick={() => navigate('/')}
-                        className="absolute top-4 left-4 px-4 py-2 border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition duration-300 z-50"
+                        className="absolute top-4 left-4 px-4 py-2 border border-green-400 text-green-400 cursor-pointer hover:bg-green-400 hover:text-black transition duration-300 z-50 "
                     >
                         ← Back to Home
                     </button>
