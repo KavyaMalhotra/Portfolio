@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-900 via-indigo-900 to-black text-white shadow-md p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <span className="text-2xl font-bold tracking-wider glow-text">
-          <img src="/ufo_10207333.png" alt="UFO" className="inline w-6 h-6 mr-2" />
+          <img src="/ufo_10207333.png" alt="UFO" className="inline w-8 h-8 mr-2" />
           My Portfolio
         </span>
 
